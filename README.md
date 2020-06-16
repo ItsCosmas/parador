@@ -6,6 +6,14 @@
 -   API Docs: https://documenter.getpostman.com/view/6675816/Szzj9JGj
 -   Frontend Docs available at `client` directory.
 
+-   Run Backend and Frontend:
+
+-   `sudo service mongod start`
+-   `npm i serve -g`
+-   `chmod +x run.sh && ./run.sh`
+
+-   Frontend: http://0.0.0.0:8080
+
 -   This simple project demonstrates the following:
 
 ### Backend
