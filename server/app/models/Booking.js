@@ -4,19 +4,26 @@
 // Store Check In date and Check Out date
 
 const mongoose = require('mongoose');
+const { v1: uuidv1 } = require('uuid');
 
-const Booking = new mongoose.Schema(
+const BookingSchema = new mongoose.Schema(
 	{
-		externalID: { type: String, required: true, unique: true },
-		user: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-		// roomType: [{ type: mongoose.Schema.Types.ObjectId, ref: 'RoomType' }],
-		roomNumber: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room' }],
+		externalId: {
+			type: String,
+			default: uuidv1,
+			required: true,
+			unique: true,
+		},
+		userId: { type: String, required: true },
+		roomTypeId: { type: String, required: true },
+		price: { type: String, required: true },
 		checkInDate: { type: Date },
 		checkOutDate: { type: Date },
 	},
+	{ timestamps: true },
 	{ strict: true }
 );
 
-const Booking = mongoose.model('Booking', Booking);
+const Booking = mongoose.model('Booking', BookingSchema);
 
 module.exports = { Booking };
