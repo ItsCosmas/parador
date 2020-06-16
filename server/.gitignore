@@ -15,7 +15,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-
+creed one last breath
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
@@ -39,3 +39,6 @@ node_modules
 
 # VS Code
 .vscode
+
+# env
+.env
