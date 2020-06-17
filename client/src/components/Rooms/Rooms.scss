@@ -1,0 +1,100 @@
+.rooms {
+	padding: 2rem;
+
+	&__table {
+		background: transparent;
+	}
+}
+
+.room__card {
+	margin-top: 2rem !important;
+	display: flex;
+	flex-direction: row;
+
+	background: white;
+
+	padding: 2rem;
+	box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+
+	&--fig {
+		flex: 0 0 20%;
+		display: flex;
+		align-items: center;
+	}
+
+	&--content {
+		flex: 0 0 45%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 2rem;
+	}
+	&--action {
+		flex: 0 0 35%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		& > *:not(:first-child) {
+			margin-left: 2rem;
+		}
+	}
+	&--img {
+		width: 100%;
+		height: auto;
+		opacity: 0.8;
+		border-radius: px;
+	}
+
+	&--link {
+		text-decoration: none;
+		color: inherit;
+
+		&:hover {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
+	&--title {
+		font-size: 24px;
+		line-height: 30px;
+
+		&:hover {
+			color: #224;
+		}
+	}
+	&--tag {
+		text-transform: uppercase;
+		color: #01adb9;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 14px;
+
+		& > :not(:first-of-type) {
+			margin-left: 2rem;
+		}
+	}
+	&--desc {
+		margin: 10px 0 0 0;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	&--flex-row {
+		justify-content: center;
+		align-items: flex-start;
+		padding-left: 4rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&--price {
+		text-transform: uppercase;
+		// color: #01adb9;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 14px;
+		margin-bottom: 1rem;
+	}
+}
