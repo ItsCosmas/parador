@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+    # The Node App
+    node-app:
+        build: ./server
+        container_name: node_app
+        depends_on:
+            - 'mongo'
+        environment:
+            - PORT=3000
+        ports:
+            - '3000:3000'
+    client-app:
+        build: ./client
+        container_name: client_app
+        depends_on:
+            - node-app
+    # MongoDB
+    mongo:
+        image: 'mongo:4.2.6-bionic'
+        container_name: mongo
+        ports:
+            - '27017:27017'
+        volumes:
+            - ./mongodata:/data/db:Z
+        restart: always
+    # Mongo Express Web-based MongoDB admin interface
+    mongo_express:
+        image: mongo-express
+        container_name: mongo_express
+        depends_on:
+            - 'mongo'
+        ports:
+            - '8081:8081'
+        restart: always
