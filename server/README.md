@@ -16,7 +16,10 @@
 -   Sample Env
 
 -   ```
-    MONGODB_URI=mongodb://localhost:27017/parador
+    # on docker
+    MONGODB_URI=mongodb://mongo/parador
+    # if not on docker
+    #MONGODB_URI=mongodb://localhost:27017/parador
     APP_jwtPrivateKey=my-very-secret-key
     APP_PORT=3000
     ```
