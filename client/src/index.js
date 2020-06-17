@@ -21,7 +21,6 @@ if (localStorage.token) {
 ReactDOM.render(
 	<Provider store={store}>
 		<Routes />
-		{/* <App /> */}
 	</Provider>,
 	document.getElementById('root')
 );
