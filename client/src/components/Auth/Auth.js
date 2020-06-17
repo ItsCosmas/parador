@@ -3,10 +3,12 @@ import React from 'react';
 import { Link, Redirect, Switch, Route } from 'react-router-dom';
 
 import './Auth.scss';
-// import authIllustration from '../../assets/illustrations/auth-illustration.svg';
+import authIllustration from '../../assets/illustrations/auth-illustration.svg';
+import logo from '../../assets/img/logo.svg';
 
 import SignIn from './SignIn';
 import Register from './Register';
+import Error404 from '../Errors/Error404';
 
 const Auth = () => {
 	return (
@@ -14,36 +16,46 @@ const Auth = () => {
 			<div className='auth'>
 				<div className='auth__visual'>
 					<h1 className='heading--main u-margin-bottom-small'>
-						<Link to='/' className={'navigation__list--link'}>
-							<span className='navigation__logo--text text--white'>
-								Wajibika
-							</span>
+						<Link to='/' className={'text--link'}>
+							<div className='topnav__logo'>
+								<img
+									src={logo}
+									alt=''
+									className='topnav__logo--img'
+								/>
+							</div>
 						</Link>
 					</h1>
-					{/* <figure className='auth__visual--figure u-margin-bottom-small'>
+					<figure className='auth__visual--figure u-margin-bottom-small'>
 						<img
 							src={authIllustration}
 							alt='Illustration'
 							className='auth__visual--illustration'
 						/>
-					</figure> */}
+					</figure>
 					<h1 className='heading--primary u-margin-bottom-small text--white'>
-						Your One Stop Public Reporting tool
+						Parador is the leading hotel destination in Africa
 					</h1>
 					<p className='text__content text--white'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Ipsa quae consequatur voluptatem nostrum assumenda earum
-						fugit consectetur atque sunt ut dicta alias impedit.
+						We are commited to serving our customers to fullest
+						satistaction. Login or Create an account to place your
+						reservation
 					</p>
 				</div>
 				<div className='auth__content'>
 					<Switch>
-						<Route exact path='/signin'>
+						{/* <Route path='/auth/'>
+							<SignIn />
+						</Route> */}
+						<Route path='/auth/signin'>
 							<SignIn />
 						</Route>
-						<Route exact path='/register'>
+						<Route path='/auth/register'>
 							<Register />
 						</Route>
+						{/* Error 404 */}
+						<Route exact path='/404' component={Error404} />
+						<Redirect from='*' to='/404' />
 					</Switch>
 				</div>
 			</div>

@@ -11,17 +11,24 @@
 	}
 
 	&__form {
-		width: 80%;
+		width: 90%;
 		// padding: 8rem;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
 
+		&--btn-group {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+
 		&--group {
 			width: 90%;
+
 			input {
-				font-size: 1.5rem;
+				font-size: 1.4rem;
 				font-family: inherit;
 				color: inherit;
 				padding: 1.5rem 2rem;
@@ -49,11 +56,11 @@
 			}
 
 			label {
-				font-size: 1.4rem;
+				font-size: 1.2rem;
 				font-weight: 700;
-				margin-left: 1rem;
-				margin-top: 2rem;
-				margin-bottom: 2rem;
+				// margin-left: 1rem;
+				margin-top: 1rem;
+				margin-bottom: 1rem;
 				display: block;
 				transition: all 0.3s;
 			}
