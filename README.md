@@ -18,6 +18,8 @@
 -   Backend: http://0.0.0.0:3000
 -   Frontend: http://0.0.0.0:8080
 
+-   Mongo Express DB client: http://0.0.0.0:8081 \*FOR DEV PURPOSE ONLY
+
 #### Alternatively without Docker:
 
 -   Install `Node 10.21.0` and Mongo `v4.0.19`
