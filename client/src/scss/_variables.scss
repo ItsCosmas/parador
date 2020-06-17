@@ -1,0 +1,40 @@
+/////////////////////////////////////////////////////////////
+// Variables
+////////////////////////////////////////////////////////////
+
+:root {
+	// colors
+	// --color-primary: #49bf4c;
+	--color-primary: #00d2ff;
+
+	--color-secondary: #9fd220;
+
+	--color-white: #fff;
+	--color-black: #000;
+
+	--color-grey-dark-1: #767676;
+	--color-grey-dark-2: #1a202c;
+
+	--color-grey-text: #767676;
+
+	--color-grey-light-1: #faf9f9;
+	--color-grey-light-2: #f4f2f2;
+	--color-grey-light-3: #f0eeee;
+	--color-grey-light-4: #ccc;
+
+	// shadows
+	--shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+	--shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+	// misc
+	--line: 1px solid --color-grey-dark-2;
+
+	// font
+	--default-font-size: 1.6rem;
+	--open-sans-font: 'Open Sans', sans-serif;
+	--roboto-font: 'Roboto', sans-serif;
+	--default-font-family: var(--open-sans-font);
+
+	// z-indexes
+	--z-index-default: 1000;
+}

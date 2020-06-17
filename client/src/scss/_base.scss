@@ -1,0 +1,24 @@
+// ----------------------- base ---------------------------- //
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+	// padding: 0 1rem;
+	overflow-x: hidden;
+	background: #f6f8fa;
+	// background: var(--color-white);
+}
+
+::selection {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}

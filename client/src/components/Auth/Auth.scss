@@ -1,0 +1,28 @@
+@import '../../scss/mixins';
+.auth {
+	display: flex;
+	min-height: 100vh;
+
+	&__visual {
+		flex: 0 0 50%;
+		padding: 5rem;
+		background-image: linear-gradient(
+			to left,
+			rgba(240, 100, 97, 1),
+			rgba(255, 94, 98, 1)
+		);
+
+		&--figure {
+			padding: 2rem 8rem;
+		}
+
+		&--illustration {
+			@include ResponsiveImage();
+			// padding: 5rem;
+			// filter: drop-shadow(0 2rem 2rem rgba(255, 153, 102, 0.6));
+		}
+	}
+	&__content {
+		flex: 0 0 50%;
+	}
+}

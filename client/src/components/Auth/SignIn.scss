@@ -1,0 +1,67 @@
+.signin {
+	width: 100%;
+	padding: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&--emoji {
+		font-size: 5rem;
+	}
+
+	&__form {
+		width: 80%;
+		// padding: 8rem;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+
+		&--group {
+			width: 90%;
+			input {
+				font-size: 1.5rem;
+				font-family: inherit;
+				color: inherit;
+				padding: 1.5rem 2rem;
+				border-radius: 2px;
+				background-color: var(--color-grey-light-2);
+				border: none;
+				width: 100%;
+				display: block;
+				transition: all 0.3s;
+
+				&:focus {
+					outline: none;
+					background-color: var(--color-grey-light-3);
+					box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.1);
+					border-bottom: 3px solid var(--color-primary);
+				}
+
+				&:focus:invalid {
+					border-bottom: 3px solid var(--color-secondary);
+				}
+
+				&::-webkit-input-placeholder {
+					color: var(--color-grey-dark-2);
+				}
+			}
+
+			label {
+				font-size: 1.4rem;
+				font-weight: 700;
+				margin-left: 1rem;
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+				display: block;
+				transition: all 0.3s;
+			}
+
+			input:placeholder-shown + label {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+}

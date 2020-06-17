@@ -1,0 +1,77 @@
+body {
+	font-size: var(--default-font-size);
+	font-family: var(--default-font-family);
+	font-weight: 300;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.heading {
+	&--super {
+		font-family: var(--open-sans-font);
+		font-weight: 900;
+		line-height: 1.5;
+		font-size: 5rem;
+	}
+	&--main {
+		font-family: var(--open-sans-font);
+		font-weight: 900;
+		line-height: 1.5;
+		font-size: 3.5rem;
+	}
+	&--sub {
+		font-family: var(--open-sans-font);
+		font-weight: 700;
+		line-height: 1.2;
+		font-size: 2.5rem;
+
+		@include respond(tablet) {
+			font-size: 2rem;
+		}
+	}
+	&--primary {
+		font-family: var(--open-sans-font);
+		font-weight: 700;
+		font-size: 2rem;
+		line-height: 1.5;
+	}
+}
+
+.text {
+	// Text Physique
+	&--brand {
+		font-family: var(--open-sans-font);
+		font-weight: 700;
+		font-size: 2.5rem;
+
+		@include respond(tablet) {
+			font-size: 1.6rem;
+		}
+	}
+	&--navigation {
+		font-size: 2rem;
+		font-weight: 600;
+
+		@include respond(tablet) {
+			font-size: 1.5rem;
+		}
+	}
+
+	// Text Colors
+	&--black {
+		color: var(--color-black);
+	}
+	&--grey {
+		color: var(--color-grey-text);
+		line-height: 2;
+	}
+	&--white {
+		color: var(--color-white);
+	}
+
+	// Text Links
+	&--link {
+		@include ResetLink();
+	}
+}
