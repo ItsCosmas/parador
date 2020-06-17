@@ -6,13 +6,28 @@
 -   API Docs: https://documenter.getpostman.com/view/6675816/Szzj9JGj
 -   Frontend Docs available at `client` directory.
 
--   Run Backend and Frontend:
+*   Fastest Way to run this project:
+
+#### With Docker:
+
+-   `docker-compose -up -t` - without logs
+-   `docker-compose up` - with logs
+
+-   Backend: http://0.0.0.0:3000
+-   Frontend: http://0.0.0.0
+
+#### Alternatively without Docker:
+
+-   Install `Node 10.21.0` and Mongo `v4.0.19`
+-   Run Backend and Frontend Production Readily:
+-   NOTE: Use a PROCESS MANAGER FOR NODE.JS like pm2 if going on Prod:
 
 -   `sudo service mongod start`
 -   `npm i serve -g`
 -   `chmod +x run.sh && ./run.sh`
 
 -   Frontend: http://0.0.0.0:8080
+-   Backend: http://0.0.0.0:3000
 
 -   This simple project demonstrates the following:
 
