@@ -9,6 +9,7 @@ exports.userOutputTemplate = (user) => {
 		fullName: user.fullName,
 		email: user.email,
 		phone: user.phone,
+		role: user.role,
 		dateJoined: user.dateJoined,
 	};
 };
