@@ -1,0 +1,44 @@
+@import '../../scss/mixins';
+.error404 {
+	display: flex;
+	flex-direction: column;
+	background-image: linear-gradient(
+			to bottom,
+			rgba(91, 192, 198, 0.75) 0%,
+			rgba(91, 192, 198, 0.9) 50%,
+			rgba(91, 192, 198, 0.75) 100%
+		),
+		url('../../assets/img/hero.jpg');
+	padding: 0rem 5rem;
+	min-height: 100vh;
+
+	@include respond(tablet) {
+		padding: 0rem 2rem;
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		color: var(--color-white);
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		color: var(--color-white);
+	}
+
+	&--figure {
+		// height: 30rem;
+		display: flex;
+		justify-content: center;
+	}
+	&--img {
+		@include ResponsiveImage();
+	}
+}
