@@ -41,8 +41,8 @@ async function registerUser(req, res) {
 		fullName: Joi.string().min(3).required(),
 		// TODO Regex validate phone and email
 		password: Joi.string().alphanum().required().min(6),
-		phone: Joi.string().alphanum().required().min(10),
-		email: Joi.string().alphanum().required(),
+		phone: Joi.string().required().min(10),
+		email: Joi.string().required(),
 	});
 
 	// Validate Body
