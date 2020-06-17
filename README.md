@@ -50,9 +50,10 @@
 ### Frontend
 
 -   React
+-   Redux
+-   State Management
 -   React Hooks
 -   Styling(Sass)
--   React Context API state management
 -   Basics of UX design
 -   Standalone frontend consuming a rest backend
 
