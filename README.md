@@ -13,8 +13,10 @@
 -   `docker-compose -up -t` - without logs
 -   `docker-compose up` - with logs
 
+*   \*Possible improvement on time it takes to build the client container first time.
+
 -   Backend: http://0.0.0.0:3000
--   Frontend: http://0.0.0.0
+-   Frontend: http://0.0.0.0:8080
 
 #### Alternatively without Docker:
 
