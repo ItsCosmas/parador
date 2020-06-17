@@ -1,0 +1,63 @@
+@import '../../scss/mixins';
+.searchbar {
+	flex: 0 0 30%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	// @media only screen and (max-width: $bp-smallest) {
+	//     order: 1;
+	//     flex: 0 0 100%;
+	//     background-color: var(--color-grey-light-2);
+	// }
+
+	&__input {
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+		background-color: var(--color-grey-light-2);
+		// background-color: rgba(0, 0, 0, 0.1);
+		// border: none;
+		border: 1px solid rgba(239, 90, 96, 0.2);
+		padding: 0.3rem 2rem;
+		border-radius: 10px;
+		width: 90%;
+		transition: all 0.2s;
+		margin-right: -3.25rem;
+
+		&:focus {
+			outline: none;
+			width: 100%;
+			background-color: var(--color-grey-light-3);
+		}
+
+		&::-webkit-input-placeholder {
+			font-weight: 100;
+			color: var(--color-grey-light-4);
+		}
+	}
+
+	&__input:focus + &__button {
+		background-color: var(--color-grey-light-3);
+	}
+
+	&__button {
+		border: none;
+		background-color: var(--color-grey-light-2);
+
+		&:focus {
+			outline: none;
+		}
+
+		&:active {
+			transform: translateY(2px);
+		}
+	}
+
+	&__icon {
+		height: 1.8rem;
+		width: 1.8rem;
+		fill: var(--color-primary);
+	}
+}
