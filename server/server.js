@@ -1,7 +1,7 @@
 const express = require('express'),
 	bodyParser = require('body-parser'),
-	mongoose = require('mongoose');
-//cors = require('cors');
+	mongoose = require('mongoose'),
+	cors = require('cors');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -11,11 +11,11 @@ const home = require('./app/routes/home');
 const users = require('./app/routes/users');
 const rooms = require('./app/routes/rooms');
 const bookings = require('./app/routes/bookings');
-
-// var corsOptions = {
-// 	origin: 'http://localhost:8080',
-// };
-// app.use(cors(corsOptions));
+// Allow CORS
+var corsOptions = {
+	origin: 'http://localhost:8080',
+};
+app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
