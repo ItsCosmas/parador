@@ -10,7 +10,7 @@
 
 #### With Docker:
 
--   `docker-compose -up -t` - without logs
+-   `docker-compose up -t` - without logs
 -   `docker-compose up` - with logs
 
 *   \*Possible improvement on time it takes to build the client container first time.
