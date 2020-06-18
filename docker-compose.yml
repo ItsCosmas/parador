@@ -23,8 +23,9 @@ services:
         container_name: mongo
         ports:
             - '27017:27017'
-        volumes:
-            - ./mongodata:/data/db:Z
+        # only use volume in dev
+        # volumes:
+        #     - ./mongodata:/data/db:Z
         restart: always
     # Mongo Express Web-based MongoDB admin interface
     mongo_express:
