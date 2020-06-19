@@ -1,14 +1,30 @@
 # Parador
 
+## WORK IN PROGRESS !!!!!!!!!!
+
 ### Hotel Management Platform
 
--   Backend Docs available at `server` directory.
+-   Backend README available at `server` directory.
 -   API Docs: https://documenter.getpostman.com/view/6675816/Szzj9JGj
--   Frontend Docs available at `client` directory.
+-   Frontend README available at `client` directory.
 
 *   Fastest Way to run this project:
 
 #### With Docker:
+
+-   `cd server`
+-   Create `.env` file:
+-   `touch .env`
+-   Sample Env
+
+-   ```
+    # on docker
+    MONGODB_URI=mongodb://mongo/parador
+    # if not on docker
+    #MONGODB_URI=mongodb://localhost:27017/parador
+    APP_jwtPrivateKey=my-very-secret-key
+    APP_PORT=3000
+    ```
 
 -   `docker-compose up -t` - without logs
 -   `docker-compose up` - with logs
@@ -23,6 +39,21 @@
 #### Alternatively without Docker:
 
 -   Install `Node 10.21.0` and Mongo `v4.0.19`
+
+-   `cd server`
+-   Create `.env` file:
+-   `touch .env`
+-   Sample Env
+
+-   ```
+    # on docker
+    #MONGODB_URI=mongodb://mongo/parador
+    # if not on docker
+    MONGODB_URI=mongodb://localhost:27017/parador
+    APP_jwtPrivateKey=my-very-secret-key
+    APP_PORT=3000
+    ```
+
 -   Run Backend and Frontend Production Readily:
 -   NOTE: Use a PROCESS MANAGER FOR NODE.JS like pm2 if going on Prod:
 
